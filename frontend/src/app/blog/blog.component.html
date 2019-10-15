@@ -1,0 +1,22 @@
+<br>
+<br>
+<br>
+<form (submit)="onAddBlog(formBlog)" #formBlog="ngForm">
+  <label>Title :</label><br>
+  <input type="text" name="title" ngModel><br>
+  <label>Content :</label><br>
+  <textarea name="content" rows="10" ngModel></textarea>
+  <br>
+  <button type="submit">บันทึก</button>
+</form>
+<br>
+<hr>
+<div *ngFor="let blog of blogs">
+  {{blog.title}}
+  <br>
+  {{blog.content}}
+  <br>
+  <button (click)="onDelete(blog.id)">ลบ</button>
+  <button (click)="onEdit(blog.id)">แก้ไข</button>
+  <hr>
+</div>

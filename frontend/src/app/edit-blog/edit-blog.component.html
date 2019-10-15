@@ -1,0 +1,11 @@
+<br>
+<br>
+<br>
+<form (submit)="onUpdate(formBlog)" #formBlog="ngForm">
+  <label>Title :</label><br>
+  <input type="text" name="title" ngModel="{{blog?.title}}"><br>
+  <label>Content :</label><br>
+  <textarea name="content" rows="10" ngModel="{{blog?.content}}"></textarea>
+  <br>
+  <button type="submit">แก้ไข</button>
+</form>
